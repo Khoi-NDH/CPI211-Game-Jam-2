@@ -18,6 +18,5 @@ public class Nav_Mesh : MonoBehaviour
     void Update()
     {
         agent.destination = target.position;
-        
     }
 }
