@@ -76,6 +76,8 @@ public class BasicPickUp : MonoBehaviour {
 
             heldObject.transform.rotation = t.rotation;
 
+            // comment
+
     }
 
 }
