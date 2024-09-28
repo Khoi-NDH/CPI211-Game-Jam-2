@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Noise
+  - AbleToGrab
+  - TryAgain
+  - Bear
+  - bear
+  - Thrown
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,14 +10,18 @@ public class Restart : MonoBehaviour
     GameObject tryAgain;
     //GameObject Victory;
     //lose barrier cube
-    GameObject loseBarrier;
+    GameObject Monster;
+    private AudioSource thisAudioSource;
+    public AudioClip Scare;
+    public float ScareVolume = 1f;
     // Start is called before the first frame update
     void Start()
     {
-        //Shows try again object UI
+        //Shows jump scare image object UI
+        thisAudioSource = GetComponent<AudioSource>();
         tryAgain = GameObject.FindGameObjectWithTag("TryAgain");
         //Victory = GameObject.FindGameObjectWithTag("Victory");
-        loseBarrier = GameObject.FindGameObjectWithTag("losebarrier");
+        Monster = GameObject.FindGameObjectWithTag("Bear");
         tryAgain.SetActive(false);
 
     }
@@ -24,13 +29,19 @@ public class Restart : MonoBehaviour
     {
         if (trigger.gameObject.CompareTag("Player"))
         {
+          
             tryAgain.SetActive(true);
             //disappear in two seconds
+            thisAudioSource.PlayOneShot(Scare);
+            thisAudioSource.volume = ScareVolume;
             Invoke("resetGame", 3f);
-        }
-        //resetGame();
+           
 
-    }
+        }
+
+    //resetGame();
+
+}
 
     void resetGame()
     {
