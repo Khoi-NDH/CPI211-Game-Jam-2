@@ -767,6 +767,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster-Cube-WithSound
       objectReference: {fileID: 0}
+    - target: {fileID: 1396519472762369780, guid: 1397ff2228de47e41adb25bc21cab195, type: 3}
+      propertyPath: m_TagString
+      value: Bear
+      objectReference: {fileID: 0}
     - target: {fileID: 1678740712786857085, guid: 1397ff2228de47e41adb25bc21cab195, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0054083765
