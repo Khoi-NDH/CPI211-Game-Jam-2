@@ -9,6 +9,9 @@ TagManager:
   - Bear
   - bear
   - Thrown
+  - Noise
+  - Teleporter
+  - FallTeleport
   layers:
   - Default
   - TransparentFX
