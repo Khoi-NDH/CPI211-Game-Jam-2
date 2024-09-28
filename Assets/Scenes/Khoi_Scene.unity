@@ -811,6 +811,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1010406263}
+    - target: {fileID: 7405540602654703482, guid: 1397ff2228de47e41adb25bc21cab195, type: 3}
+      propertyPath: m_TagString
+      value: Bear
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

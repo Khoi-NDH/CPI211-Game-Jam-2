@@ -27,7 +27,7 @@ public class SFXManager : MonoBehaviour
 
     void CallNoise()
     {
-        Invoke("RandomNoise", 5f);
+        Invoke("RandomNoise", Random.Range(3, 10));
     }
 
     // Update is called once per frame
