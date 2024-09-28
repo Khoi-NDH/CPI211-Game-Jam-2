@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class BasicPickUp : MonoBehaviour {
 
+    [SerializeField] public ThrowMode throwMode = ThrowMode.ThrowOnRelease;
+
     [HideInInspector]
     public GameObject heldObject;
     [HideInInspector]
@@ -21,10 +23,18 @@ public class BasicPickUp : MonoBehaviour {
     public float distance = 0f;
     public float height = 0f;
 
+    // Selector for whether to throw items on press or release of left mouse
+    public enum ThrowMode
+    {
+        ThrowOnPress,
+        ThrowOnRelease
+    }
+
     private void Update() {
         
         var t = transform;
         var pressedLeftMouse = Input.GetKeyDown(KeyCode.Mouse0);
+        var releasedLeftMouse = Input.GetKeyUp(KeyCode.Mouse0);
         var pressedRightMouse = Input.GetKeyDown(KeyCode.Mouse1);
         
         // var pressedE = Input.GetKeyDown(KeyCode.E);
@@ -32,8 +42,8 @@ public class BasicPickUp : MonoBehaviour {
         // while holding object
         if (heldObject) {
 
-            // to throw the object while holding it, press Left Mouse
-            if (pressedLeftMouse) {
+            if (throwMode == ThrowMode.ThrowOnPress && pressedLeftMouse ||
+                throwMode == ThrowMode.ThrowOnRelease && releasedLeftMouse) {
                 var tCam = GameObject.Find("First Person Camera").transform;
                 var rigidBody = heldObject.GetComponent<Rigidbody>();
 
