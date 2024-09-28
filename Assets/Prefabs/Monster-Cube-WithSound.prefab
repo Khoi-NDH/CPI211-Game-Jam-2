@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2828049626151431707}
   m_Layer: 0
   m_Name: Monster-Cube-WithSound
-  m_TagString: Untagged
+  m_TagString: Bear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -380,6 +380,3 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fd395ae8994d8ae4a989343bbd8de496, type: 3}
   - {fileID: 8300000, guid: 3eaf8f91523b45a4db7285bc0354422a, type: 3}
   - {fileID: 8300000, guid: 70dc8d0ca8371e64b8cbe48b222a1c3f, type: 3}
-  minWaitBetweenPlays: 1
-  maxWaitBetweenPlays: 5
-  waitTimeCountdown: -1

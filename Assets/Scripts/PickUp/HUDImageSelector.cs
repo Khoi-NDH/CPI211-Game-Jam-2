@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HUDImageSelector : MonoBehaviour
 {
-    [SerializeField] GameObject player;
+    public GameObject player;
     private BasicPickUp pickUp;
 
     public Sprite openHand;
@@ -28,11 +28,10 @@ public class HUDImageSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!pickUp)
-            return;
-
         if (pickUp.heldObject)
+        {
             image.overrideSprite = grabHand;
+        }
         else
         {
             image.overrideSprite = pickUp.isHovering ? openHand : null;

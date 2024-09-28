@@ -4,36 +4,29 @@ using UnityEngine;
 
 public class NoiseTrigger : MonoBehaviour
 {
-    public GameObject[] adjacentRooms;   // List of adjacent rooms (triggers), currently populated manually for each room
-    [Tooltip("Amount propagation distance should decay when a noise travels through the room.")]
-    [SerializeField] private int distanceDecay = 1;
-
+    [HideInInspector]
+    public List<GameObject> adjacentRooms = new();
     [HideInInspector]
     public int propagationDist;
 
-    public bool bearPresent = false;
+    [Tooltip("Amount propagation distance should decay when a noise travels through the room.")]
+    public int distanceDecay = 1;
+    public bool monsterPresent = false;
 
-    void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider collider)
     {
-        // If something made a loud noise
-        if (collider.tag == "Noise")
+        // Automatically detect connected room tiles
+        if (collider.CompareTag("RoomTrigger"))
+            adjacentRooms.Add(collider.gameObject);
+
+        // If something makes a loud noise
+        if (collider.CompareTag("Noise"))
+            GetNoise(collider);
+
+        if (collider.CompareTag("Bear"))
         {
-            // Get noise strength
-            propagationDist = collider.GetComponent<NoiseEvent>().noiseStrength;
-            Debug.Log("Noise triggered in " + name + " (strength " + propagationDist + ")");
-
-            // Destroy noise event if it is not persistent
-            if (!collider.GetComponent<NoiseEvent>().isPersistent)
-                Destroy(collider.gameObject);
-
-            // Call noise propagation method
-            propagateNoise();
-        }
-
-        if (collider.tag == "Bear")
-        {
-            bearPresent = true;
-            Debug.Log("Bear has entered " + name);
+            Debug.Log("Monster has entered " + name);
+            monsterPresent = true;
         }
     }
 
@@ -44,42 +37,55 @@ public class NoiseTrigger : MonoBehaviour
     }
     */
 
-    void OnTriggerExit(Collider collider)
+    private void OnTriggerExit(Collider collider)
     {
-        if (collider.tag == "Bear")
+        if (collider.CompareTag("Bear"))
         {
-            bearPresent = false;
-            Debug.Log("Bear has left " + name);
+            Debug.Log("Monster has left " + name);
+            monsterPresent = false;
         }
+    }
+    private void GetNoise(Collider collider)
+    {
+        var noise = collider.GetComponent<NoiseEvent>();
+
+        // Get noise strength
+        propagationDist = noise.noiseStrength;
+        Debug.Log("Noise triggered in " + name + " (strength " + propagationDist + ")");
+
+        // Destroy noise event if it is not persistent
+        if (!noise.isPersistent)
+            Destroy(collider.gameObject);
+
+        // Call noise propagation method
+        PropagateNoise();
     }
 
     // Propagate noise breadth-first, visiting each adjacent room
-    // If bear is in one of the visited rooms, it will hear the noise and investigate
-    void propagateNoise()
+    // If monster is in one of the visited rooms, it will hear the noise and investigate
+    private void PropagateNoise()
     {
-        Queue<GameObject> queue = new Queue<GameObject>();
-        List<string> visited = new List<string>();
+        Queue<GameObject> queue = new();
+        List<string> visited = new();
         GameObject currRoom;
 
         visited.Add(name);
-        queue.Enqueue(this.gameObject);
+        queue.Enqueue(gameObject);
 
         while (queue.Count > 0)
         {
             currRoom = queue.Dequeue();
+            var currTrigger = currRoom.GetComponent<NoiseTrigger>();
 
-            if (bearPresent)
+            if (currTrigger.monsterPresent)
             {
-                Debug.Log("Bear in " + currRoom.name  + " heard a noise!");
-                /*
-                 * TODO:
-                 * Notify bear to investigate once it is implemented
-                 */
+                Debug.Log("Monster in " + currRoom.name + " heard a noise!");
+                NotifyMonster();
                 return;
             }
 
             // If there is remaining distance for the noise to travel
-            if (currRoom.GetComponent<NoiseTrigger>().propagationDist > 0)
+            if (currTrigger.propagationDist > 0)
             {
                 // Spread noise to unvisited rooms
                 foreach (var room in currRoom.GetComponent<NoiseTrigger>().adjacentRooms)
@@ -87,17 +93,27 @@ public class NoiseTrigger : MonoBehaviour
                     if (visited.Contains(room.name))
                         continue;
 
+                    var trigger = room.GetComponent<NoiseTrigger>();
+
                     // Set the distance for noise to travel from each room
                     // to the current remaining distance minus the amount it
                     // should decay when traveling through the room (default 1)
                     // For example: a large room or long hallway may have a larger decay
-                    room.GetComponent<NoiseTrigger>().propagationDist = (currRoom.GetComponent<NoiseTrigger>().propagationDist - room.GetComponent<NoiseTrigger>().distanceDecay);
+                    trigger.propagationDist = (currTrigger.propagationDist - trigger.distanceDecay);
 
-                    Debug.Log("Noise propagated to " + room.name + " (strength " + room.GetComponent<NoiseTrigger>().propagationDist + ")");
+                    Debug.Log("Noise propagated to " + room.name + " (strength " + trigger.propagationDist + ")");
                     visited.Add(room.name);
                     queue.Enqueue(room);
                 }
             }
         }
+    }
+
+    private void NotifyMonster()
+    {
+        /*
+         * TODO:
+         * Notify monster to investigate once it is implemented
+         */
     }
 }

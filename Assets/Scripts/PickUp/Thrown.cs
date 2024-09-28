@@ -14,9 +14,14 @@ public class Thrown : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        tag = "AbleToGrab";
+        if (CompareTag("Thrown"))
+        {
+            tag = "AbleToGrab";
 
-        if (noise)
-            noise.MakeNoise(3);
+            if (noise)
+            {
+                noise.MakeNoise(3);
+            }
+        }
     }
 }

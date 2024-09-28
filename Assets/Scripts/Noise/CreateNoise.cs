@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class CreateNoise : MonoBehaviour
 {
-    [SerializeField] private GameObject noiseObject;
+    public GameObject noiseObject;
 
+    public void Start()
+    {
+        if (!noiseObject)
+        {
+            Debug.Log(name + " does not have a noise object connected!");
+        }
+    }
     public void MakeNoise(int strength)
     {
         var noise = GameObject.Instantiate(noiseObject, transform);

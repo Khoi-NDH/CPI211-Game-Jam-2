@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5165972245543794845}
   m_Layer: 0
   m_Name: RoomTrigger
-  m_TagString: Untagged
+  m_TagString: RoomTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

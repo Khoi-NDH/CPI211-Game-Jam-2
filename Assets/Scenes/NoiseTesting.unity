@@ -1993,10 +1993,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c8d5f9693dbe140bec0edf0d355e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  throwMode: 1
   heldObject: {fileID: 0}
   isHovering: 0
-  throwForce: 5
-  radius: 1
+  throwForce: 8
+  radius: 0.5
   distance: 1
   height: 0
 --- !u!1001 &1417995734
@@ -2203,6 +2204,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}

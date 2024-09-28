@@ -7,8 +7,10 @@ TagManager:
   - AbleToGrab
   - TryAgain
   - Bear
-  - bear
   - Thrown
+  - Noise
+  - RoomTrigger
+  - bear
   layers:
   - Default
   - TransparentFX
