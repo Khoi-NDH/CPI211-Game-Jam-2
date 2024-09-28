@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Noise
+  - Monster
+  - TryAgain
+  - AbleToGrab
+  - Thrown
   layers:
   - Default
   - TransparentFX
