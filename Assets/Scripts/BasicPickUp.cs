@@ -35,6 +35,8 @@ public class BasicPickUp : MonoBehaviour {
                 rigidBody.drag = 1f;
                 rigidBody.useGravity = true;
 
+                heldObject.tag = "Thrown";
+
                 // object no longer held
                 heldObject = null;
 
@@ -75,8 +77,6 @@ public class BasicPickUp : MonoBehaviour {
             rigidBody.AddForce(difference * 500);
 
             heldObject.transform.rotation = t.rotation;
-
-            // comment
 
     }
 
