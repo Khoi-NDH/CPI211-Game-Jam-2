@@ -3,12 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Noise
-  - Monster
-  - TryAgain
-  - AbleToGrab
-  - Thrown
+  tags: []
   layers:
   - Default
   - TransparentFX

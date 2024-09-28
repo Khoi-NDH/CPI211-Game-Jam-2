@@ -7,9 +7,6 @@ public class SFXManager : MonoBehaviour
     public static SFXManager sndMan;
     private AudioSource audioSrc;
     public AudioClip[] IdleSound;
-    public float minWaitBetweenPlays = 1f;
-    public float maxWaitBetweenPlays = 5f;
-    public float waitTimeCountdown = -1f;
     private int randomIdleSound;
 
     // Start is called before the first frame update
@@ -37,6 +34,7 @@ public class SFXManager : MonoBehaviour
     void  RandomNoise()
     {
         randomIdleSound = Random.Range(0, 5);
+        Debug.Log("Moaning Sound");
         audioSrc.PlayOneShot(IdleSound[randomIdleSound]);
         CallNoise();
 
