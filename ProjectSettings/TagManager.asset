@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Noise
+  - Monster
+  - TryAgain
+  - Bear
   layers:
   - Default
   - TransparentFX

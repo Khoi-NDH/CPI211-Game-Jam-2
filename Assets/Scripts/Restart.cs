@@ -21,7 +21,7 @@ public class Restart : MonoBehaviour
         thisAudioSource = GetComponent<AudioSource>();
         tryAgain = GameObject.FindGameObjectWithTag("TryAgain");
         //Victory = GameObject.FindGameObjectWithTag("Victory");
-        Monster = GameObject.FindGameObjectWithTag("Monster");
+        Monster = GameObject.FindGameObjectWithTag("Bear");
         tryAgain.SetActive(false);
 
     }
