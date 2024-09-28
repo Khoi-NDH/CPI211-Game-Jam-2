@@ -37,6 +37,7 @@ public class SFXManager : MonoBehaviour
     void  RandomNoise()
     {
         randomIdleSound = Random.Range(0, 5);
+        Debug.Log("Moaning Sound");
         audioSrc.PlayOneShot(IdleSound[randomIdleSound]);
         CallNoise();
 
