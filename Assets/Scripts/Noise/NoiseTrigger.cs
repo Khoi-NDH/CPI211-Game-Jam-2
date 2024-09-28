@@ -17,11 +17,15 @@ public class NoiseTrigger : MonoBehaviour
     {
         // Automatically detect connected room tiles
         if (collider.CompareTag("RoomTrigger"))
+        {
             adjacentRooms.Add(collider.gameObject);
+        }
 
         // If something makes a loud noise
         if (collider.CompareTag("Noise"))
+        {
             GetNoise(collider);
+        }
 
         if (collider.CompareTag("Bear"))
         {
@@ -31,7 +35,7 @@ public class NoiseTrigger : MonoBehaviour
     }
 
     /*
-    void OnTriggerStay(Collider collider)
+    private void OnTriggerStay(Collider collider)
     {
         // For persistent noise triggers, currently unimplemented
     }
@@ -55,7 +59,9 @@ public class NoiseTrigger : MonoBehaviour
 
         // Destroy noise event if it is not persistent
         if (!noise.isPersistent)
+        {
             Destroy(collider.gameObject);
+        }
 
         // Call noise propagation method
         PropagateNoise();
@@ -91,7 +97,9 @@ public class NoiseTrigger : MonoBehaviour
                 foreach (var room in currRoom.GetComponent<NoiseTrigger>().adjacentRooms)
                 {
                     if (visited.Contains(room.name))
+                    {
                         continue;
+                    }
 
                     var trigger = room.GetComponent<NoiseTrigger>();
 

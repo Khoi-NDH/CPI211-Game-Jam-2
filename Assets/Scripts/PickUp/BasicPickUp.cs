@@ -32,7 +32,7 @@ public class BasicPickUp : MonoBehaviour {
 
     private void Update()
     {
-        var t = transform;
+        var t = GameObject.Find("First Person Camera").transform;
         var pressedLeftMouse = Input.GetKeyDown(KeyCode.Mouse0);
         var releasedLeftMouse = Input.GetKeyUp(KeyCode.Mouse0);
         var pressedRightMouse = Input.GetKeyDown(KeyCode.Mouse1);
@@ -45,14 +45,13 @@ public class BasicPickUp : MonoBehaviour {
             if (throwMode == ThrowMode.ThrowOnPress && pressedLeftMouse ||
                 throwMode == ThrowMode.ThrowOnRelease && releasedLeftMouse)
             {
-                var tCam = GameObject.Find("First Person Camera").transform;
                 var rigidBody = heldObject.GetComponent<Rigidbody>();
 
                 // reduced drag for better throw feel
                 rigidBody.drag = 0.5f;
                 rigidBody.useGravity = true;
 
-                rigidBody.AddForce(tCam.forward * throwForce, ForceMode.Impulse);
+                rigidBody.AddForce(t.forward * throwForce, ForceMode.Impulse);
 
                 heldObject.tag = "Thrown";
 

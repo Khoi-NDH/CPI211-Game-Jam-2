@@ -49,6 +49,8 @@ public class MovementNoise : MonoBehaviour
             }
         }
         else if (timer > 0f)
+        {
             timer = (Mathf.Max(timer - Time.deltaTime * decayRate, 0f));
+        }
     }
 }

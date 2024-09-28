@@ -6,7 +6,7 @@ public class CreateNoise : MonoBehaviour
 {
     public GameObject noiseObject;
 
-    public void Start()
+    private void Start()
     {
         if (!noiseObject)
         {
