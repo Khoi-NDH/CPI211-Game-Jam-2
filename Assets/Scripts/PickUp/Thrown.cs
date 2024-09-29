@@ -6,6 +6,9 @@ public class Thrown : MonoBehaviour
 {
     private CreateNoise noise;
 
+    public int strength = 0;
+    public bool singleUse = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +19,14 @@ public class Thrown : MonoBehaviour
     {
         if (CompareTag("Thrown"))
         {
-            tag = "AbleToGrab";
+            if (!singleUse)
+            {
+                tag = "AbleToGrab";
+            }
 
             if (noise)
             {
-                noise.MakeNoise(3);
+                noise.MakeNoise(strength);
             }
         }
     }

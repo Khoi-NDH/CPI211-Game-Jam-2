@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class NoiseTrigger : MonoBehaviour
 {
-    [HideInInspector]
-    public List<GameObject> adjacentRooms = new();
+    public List<GameObject> adjacentRooms = new();  // list of adjacent room triggers, currently populated manually
     [HideInInspector]
     public int propagationDist;
 
@@ -15,12 +14,6 @@ public class NoiseTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        // Automatically detect connected room tiles
-        if (collider.CompareTag("RoomTrigger"))
-        {
-            adjacentRooms.Add(collider.gameObject);
-        }
-
         // If something makes a loud noise
         if (collider.CompareTag("Noise"))
         {
@@ -49,6 +42,7 @@ public class NoiseTrigger : MonoBehaviour
             monsterPresent = false;
         }
     }
+
     private void GetNoise(Collider collider)
     {
         var noise = collider.GetComponent<NoiseEvent>();
