@@ -5,36 +5,25 @@ using UnityEngine;
 public class PropSound : MonoBehaviour
 {
  
-    //public GameObject GenericSoundPrefab;
+    public GameObject GenericSoundPrefab;
+    public GameObject GenericObject;
     public bool collided = false;
     
-    void Start()
-    {
-        //Collider Objectcollider = GetComponent<Collider>();
+    void Start() {
+
+   
+
+
     }
     private void OnCollisionEnter(Collision Collision)
     {
-       
-
-        if (collided != true )
-        {
-            Debug.Log("Impact!");
-            collided = true;
-           
-        }
-      
-    }
-
-   private void OnCollisionExit(Collision Collision)
-    {
-
-        if (collided == true)
-        {
-
-            collided = false;
-        }
+        Debug.Log("Impact!");
+        GameObject instance = Instantiate(GenericSoundPrefab, GenericObject.transform.position, Quaternion.identity);
+        Destroy(instance, 1f);
 
     }
+
+
 
 
 
