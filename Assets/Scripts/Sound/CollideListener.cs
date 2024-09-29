@@ -6,7 +6,8 @@ using UnityEngine;
 public class CollideListener : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private GameObject GenericObject;
+    private GameObject GenericObject;
+    public GameObject floor;
     public GameObject GenericSoundPrefab;
     private bool collided = false;
     private bool collision_occured = false;
@@ -15,7 +16,7 @@ public class CollideListener : MonoBehaviour
     {
 
         GenericObject = GameObject.FindGameObjectWithTag("AbleToGrab");
-       
+        collided = false;
 
     }
     void Awake()
@@ -29,14 +30,14 @@ public class CollideListener : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        collided = GenericObject.GetComponent<PropSound>().collided;
+        collided = floor.GetComponent<PropSound>().collided;
    
 
         if (collided == true && collision_occured == false)
         {
             GameObject instance = Instantiate(GenericSoundPrefab, GenericObject.transform.position, Quaternion.identity);
     
-            Destroy(instance,0.3f);
+            Destroy(instance,1f);
             collision_occured = true;
             Debug.Log("Impact!!!!");
 
