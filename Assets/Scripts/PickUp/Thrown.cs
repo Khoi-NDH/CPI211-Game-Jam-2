@@ -5,7 +5,6 @@ using UnityEngine;
 public class Thrown : MonoBehaviour
 {
     private CreateNoise noise;
-    public AudioSource shatterNoise;
 
     public GameObject shatteredVersion;
 
@@ -16,7 +15,6 @@ public class Thrown : MonoBehaviour
     void Start()
     {
         noise = GetComponent<CreateNoise>();
-        shatterNoise = shatteredVersion.GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -28,8 +26,6 @@ public class Thrown : MonoBehaviour
                 tag = "AbleToGrab";
             }
 
-            // play noise before destroying 
-            shatterNoise.Play();
             // change to the broken version of item
             shatter();
 
