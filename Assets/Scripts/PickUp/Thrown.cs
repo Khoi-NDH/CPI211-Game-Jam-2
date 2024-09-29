@@ -5,6 +5,9 @@ using UnityEngine;
 public class Thrown : MonoBehaviour
 {
     private CreateNoise noise;
+    public AudioSource shatterNoise;
+
+    public GameObject shatteredVersion;
 
     public int strength = 0;
     public bool singleUse = false;
@@ -13,6 +16,7 @@ public class Thrown : MonoBehaviour
     void Start()
     {
         noise = GetComponent<CreateNoise>();
+        shatterNoise = shatteredVersion.GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -24,10 +28,24 @@ public class Thrown : MonoBehaviour
                 tag = "AbleToGrab";
             }
 
+            // play noise before destroying 
+            shatterNoise.Play();
+            // change to the broken version of item
+            shatter();
+
             if (noise)
             {
                 noise.MakeNoise(strength);
             }
         }
     }
+
+    private void shatter() {
+
+        // spawn shattered version at current position, destroy unshattered version
+        Instantiate(shatteredVersion, transform.position, transform.rotation);
+        Destroy(gameObject);
+
+    }
+
 }
