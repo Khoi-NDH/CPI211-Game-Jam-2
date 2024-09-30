@@ -6,22 +6,28 @@ public class PropSound : MonoBehaviour
 {
  
     public GameObject GenericSoundPrefab;
-    public GameObject GenericObject;
+    private GameObject GenericObject;
     public bool collided = false;
     
     void Start() {
 
-   
+        GenericObject = gameObject;
 
 
     }
     private void OnCollisionEnter(Collision Collision)
     {
         Debug.Log("Impact!");
-        GameObject instance = Instantiate(GenericSoundPrefab, GenericObject.transform.position, Quaternion.identity);
-        Destroy(instance, 1f);
+       
 
     }
+
+    private void OnCollisionExit(Collision Collision)
+    {
+        GameObject instance = Instantiate(GenericSoundPrefab, GenericObject.transform.position, Quaternion.identity);
+        Destroy(instance, 0.5f);
+    }
+
 
 
 
