@@ -15200,7 +15200,7 @@ GameObject:
   - component: {fileID: 1415464941}
   - component: {fileID: 1415464940}
   m_Layer: 5
-  m_Name: TryAgain
+  m_Name: JumpscareImage
   m_TagString: TryAgain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
