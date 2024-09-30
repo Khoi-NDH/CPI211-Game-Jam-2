@@ -25,7 +25,7 @@ public class Teleporter : MonoBehaviour
             Victory.SetActive(true);
 
             Victory.GetComponent<Animator>().Play("Introduce text");
-            Invoke("resetGame", 20f);
+            Invoke("resetGame", 10f);
 
 
 

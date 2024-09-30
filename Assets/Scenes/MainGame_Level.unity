@@ -6992,7 +6992,7 @@ MonoBehaviour:
   isHovering: 0
   throwForce: 8
   radius: 0.25
-  distance: 2
+  distance: 1
   height: 0
 --- !u!114 &712619262
 MonoBehaviour:
