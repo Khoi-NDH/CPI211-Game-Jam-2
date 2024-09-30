@@ -2008,6 +2008,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1509986086}
+    - target: {fileID: 8193626830882472637, guid: 1397ff2228de47e41adb25bc21cab195, type: 3}
+      propertyPath: JumpscareImage
+      value: 
+      objectReference: {fileID: 1690255914}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5212,12 +5216,12 @@ GameObject:
   - component: {fileID: 1690255917}
   - component: {fileID: 1690255916}
   m_Layer: 5
-  m_Name: TryAgain
+  m_Name: JumpscareImage
   m_TagString: TryAgain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1690255915
 RectTransform:
   m_ObjectHideFlags: 0

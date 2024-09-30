@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Restart : MonoBehaviour
 {
     //Try Again Text UI
-    GameObject tryAgain;
+    public GameObject JumpscareImage;
     //GameObject Victory;
     //lose barrier cube
     GameObject Monster;
@@ -19,18 +19,17 @@ public class Restart : MonoBehaviour
     {
         //Shows jump scare image object UI
         thisAudioSource = GetComponent<AudioSource>();
-        tryAgain = GameObject.FindGameObjectWithTag("TryAgain");
         //Victory = GameObject.FindGameObjectWithTag("Victory");
         Monster = GameObject.FindGameObjectWithTag("Bear");
-        tryAgain.SetActive(false);
+        JumpscareImage.SetActive(false);
 
     }
     private void OnTriggerEnter(Collider trigger)
     {
         if (trigger.gameObject.CompareTag("Player"))
         {
-          
-            tryAgain.SetActive(true);
+
+            JumpscareImage.SetActive(true);
             //disappear in two seconds
             thisAudioSource.PlayOneShot(Scare);
             thisAudioSource.volume = ScareVolume;
