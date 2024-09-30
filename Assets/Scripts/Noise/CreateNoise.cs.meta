@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - noiseObject: {instanceID: 0}
+  - noiseObject: {fileID: 5565628922476931005, guid: 22fd6178a0789fe40a34eed28ee7012f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

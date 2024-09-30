@@ -21,22 +21,24 @@ public class Thrown : MonoBehaviour
     {
         if (CompareTag("Thrown"))
         {
-            if (!singleUse)
-            {
-                tag = "AbleToGrab";
-            }
-
-            // change to the broken version of item
-            shatter();
-
             if (noise)
             {
                 noise.MakeNoise(strength);
             }
+
+            if (singleUse)
+            {
+                // change to the broken version of item
+                Shatter();
+            }
+            else
+            {
+                tag = "AbleToGrab";
+            }
         }
     }
 
-    private void shatter() {
+    private void Shatter() {
 
         // spawn shattered version at current position, destroy unshattered version
         Instantiate(shatteredVersion, transform.position, transform.rotation);

@@ -15,7 +15,7 @@ public class CreateNoise : MonoBehaviour
     }
     public void MakeNoise(int strength)
     {
-        var noise = GameObject.Instantiate(noiseObject, transform);
+        var noise = GameObject.Instantiate(noiseObject, transform.position, Quaternion.identity);
         noise.GetComponent<NoiseEvent>().noiseStrength = strength;
     }
 }

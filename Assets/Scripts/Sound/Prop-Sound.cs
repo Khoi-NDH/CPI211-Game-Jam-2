@@ -17,7 +17,7 @@ public class PropSound : MonoBehaviour
     }
     private void OnCollisionEnter(Collision Collision)
     {
-        Debug.Log("Impact!");
+        
        
 
     }
