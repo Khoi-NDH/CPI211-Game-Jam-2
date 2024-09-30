@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: df252c1e21b51e54e84a39132f7d60f3, type: 3}
       propertyPath: m_TagString
-      value: AbleToGrab
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -66,12 +66,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: df252c1e21b51e54e84a39132f7d60f3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5492825521989642917}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: df252c1e21b51e54e84a39132f7d60f3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -8367299334045902341}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: df252c1e21b51e54e84a39132f7d60f3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -4771999306499447183}
   m_SourcePrefab: {fileID: 100100000, guid: df252c1e21b51e54e84a39132f7d60f3, type: 3}
 --- !u!1 &2776519289841480454 stripped
 GameObject:
@@ -127,31 +121,3 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8750069040557670459, guid: df252c1e21b51e54e84a39132f7d60f3, type: 3}
---- !u!114 &-8367299334045902341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2776519289841480454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f45fe53f39317284484859ca7f6afc8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  noiseObject: {fileID: 5565628922476931005, guid: 22fd6178a0789fe40a34eed28ee7012f, type: 3}
---- !u!114 &-4771999306499447183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2776519289841480454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d59f643b730982b4fa899eb3c19731df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shatteredVersion: {fileID: 0}
-  strength: 1
-  singleUse: 0
