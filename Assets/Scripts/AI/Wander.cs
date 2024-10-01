@@ -1,18 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Wander : MonoBehaviour
 {
+    public List<GameObject> rooms = new();
+    private Animator animator;
+    private Animation animation;
+    private Rigidbody rb;
+    private NavMeshAgent agent;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
+        SelectNewDestination();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (rb.velocity != Vector3.zero)
+        {
+            animator.Play
+        }
+    }
+
+    void SelectNewDestination()
+    {
+        var room = rooms[Random.Range(0, rooms.Count)];
+        var randX = room.transform.position.x + Random.Range(-3f, 3f);
+        var randZ = room.transform.position.x + Random.Range(-3f, 3f);
+
+        agent.destination = new Vector3(randX, room.transform.position.y, randZ);
+        Invoke("SelectNewDestination", Random.Range(7.5f, 15f));
     }
 }

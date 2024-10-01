@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,33 +10,38 @@ public class Teleporter : MonoBehaviour
     public GameObject Player;
     public GameObject Teleport;
     public GameObject Victory;
+    public GameObject Locked;
     private Animator fade_transition;
-    // Start is called before the first frame update
 
+    public bool hasKey = false;
+
+    // Start is called before the first frame update
     private void Start()
     {
-     Victory.SetActive(false);
+        Victory.SetActive(false);
     }
+
     private void OnTriggerEnter(Collider Col)
     {
         if (Col.gameObject.CompareTag("Teleporter"))
         {
-            
-            Player.transform.position = Teleport.transform.position;
-            Victory.SetActive(true);
+            if (!hasKey)
+            {
+                Locked.SetActive(true);
+                Locked.GetComponent<Animator>().Play("Introduce text");
+            }
+            else
+            {
+                Player.transform.position = Teleport.transform.position;
+                Victory.SetActive(true);
 
-            Victory.GetComponent<Animator>().Play("Introduce text");
-            Invoke("resetGame", 10f);
-
-
-
-
+                Victory.GetComponent<Animator>().Play("Introduce text");
+                Invoke("ResetGame", 10f);
+            }
         }
-      
-
-
     }
-   void resetGame()
+    
+    void ResetGame()
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);

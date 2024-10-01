@@ -12,6 +12,8 @@ TagManager:
   - Noise
   - Teleporter
   - FallTeleport
+  - RoomTrigger
+  - Key
   layers:
   - Default
   - TransparentFX

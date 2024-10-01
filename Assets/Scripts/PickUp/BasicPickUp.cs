@@ -23,6 +23,8 @@ public class BasicPickUp : MonoBehaviour {
     public float distance = 1f;
     public float height = 0f;
 
+    public AudioClip keyGet;
+
     // Selector for whether to throw items on press or release of left mouse
     public enum ThrowMode
     {
@@ -75,13 +77,21 @@ public class BasicPickUp : MonoBehaviour {
         else
         {
             var hits = Physics.SphereCastAll(t.position + t.forward, radius, t.forward, radius);
-            var hitIndex = Array.FindIndex(hits, hit => hit.transform.tag == "AbleToGrab");
+            var hitIndex = Array.FindIndex(hits, hit => (hit.transform.CompareTag("AbleToGrab") || hit.transform.CompareTag("Key")));
 
             isHovering = hitIndex != -1 ? true : false;
 
             // to pick up a pick up-able object, click Left Mouse
             if (pressedLeftMouse && isHovering)
             {
+                if (hits[hitIndex].transform.CompareTag("Key"))
+                {
+                    GetComponentInParent<Teleporter>().hasKey = true;
+                    GetComponentInParent<CreateNoise>().MakeNoise(100);
+                    AudioSource.PlayClipAtPoint(keyGet, hits[hitIndex].transform.position);
+                    Destroy(hits[hitIndex].transform.gameObject);
+                }
+
                 var hitObject = hits[hitIndex].transform.gameObject;
                 heldObject = hitObject;
 
