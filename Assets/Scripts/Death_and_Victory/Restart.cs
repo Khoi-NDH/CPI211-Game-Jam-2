@@ -43,7 +43,7 @@ public class Restart : MonoBehaviour
     void ResetGame()
     {
         Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     // Update is called once per frame

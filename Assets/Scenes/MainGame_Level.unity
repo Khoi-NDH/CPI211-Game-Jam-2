@@ -9730,8 +9730,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c72dabd9b0b7bac45956efae5dfd966c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wanderSpeed: 3
+  searchSpeed: 5
   searchTime: 30
-  arrivedAtDest: 0
 --- !u!1 &860109202 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9eae25c482ccaaf49a7ab4a37bd1d68d, type: 3}

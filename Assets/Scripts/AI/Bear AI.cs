@@ -13,10 +13,14 @@ public class BearAI : MonoBehaviour
     private NavMeshAgent agent;
 
     private AIState state = AIState.Wander;
+    [Header("Movement Speed")]
+    public float wanderSpeed = 3f;
+    public float searchSpeed = 6f;
+    [Header("Search")]
     public float searchTime = 30f;
     private float searchTimer;
 
-    public bool arrivedAtDest = true;
+    private bool arrivedAtDest = true;
 
     private enum AIState
     {
@@ -66,7 +70,7 @@ public class BearAI : MonoBehaviour
             if (searchTimer >= searchTime)
             {
                 state = AIState.Wander;
-                agent.speed = 3;
+                agent.speed = wanderSpeed;
             }
         }
     }
@@ -99,7 +103,7 @@ public class BearAI : MonoBehaviour
     public void NoiseHeard(Transform transform, Vector3 position)
     {
         state = AIState.Search;
-        agent.speed = 8;
+        agent.speed = searchSpeed;
         search.BeginSearch(transform, position);
         searchTimer = 0f;
     }
