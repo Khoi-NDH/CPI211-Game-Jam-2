@@ -12666,6 +12666,46 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 712619265}
+    - target: {fileID: 3656995766804965867, guid: 1397ff2228de47e41adb25bc21cab195, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3291214
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656995766804965867, guid: 1397ff2228de47e41adb25bc21cab195, type: 3}
+      propertyPath: m_Size.y
+      value: 0.6036253
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656995766804965867, guid: 1397ff2228de47e41adb25bc21cab195, type: 3}
+      propertyPath: m_Size.z
+      value: 3.0496783
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656995766804965867, guid: 1397ff2228de47e41adb25bc21cab195, type: 3}
+      propertyPath: m_Center.x
+      value: -0.16456068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656995766804965867, guid: 1397ff2228de47e41adb25bc21cab195, type: 3}
+      propertyPath: m_Center.y
+      value: -0.08504994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656995766804965867, guid: 1397ff2228de47e41adb25bc21cab195, type: 3}
+      propertyPath: m_Center.z
+      value: 0.22487736
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363608215982097479, guid: 1397ff2228de47e41adb25bc21cab195, type: 3}
+      propertyPath: m_Size.y
+      value: 0.6453333
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363608215982097479, guid: 1397ff2228de47e41adb25bc21cab195, type: 3}
+      propertyPath: m_Size.z
+      value: 3.1498294
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363608215982097479, guid: 1397ff2228de47e41adb25bc21cab195, type: 3}
+      propertyPath: m_Center.y
+      value: -0.07922111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363608215982097479, guid: 1397ff2228de47e41adb25bc21cab195, type: 3}
+      propertyPath: m_Center.z
+      value: 0.27896065
+      objectReference: {fileID: 0}
     - target: {fileID: 8193626830882472637, guid: 1397ff2228de47e41adb25bc21cab195, type: 3}
       propertyPath: JumpscareImage
       value: 
