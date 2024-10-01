@@ -3720,11 +3720,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 75cc8d45f97606243a94d0388027da20, type: 3}
       propertyPath: m_Name
-      value: Bear animation
+      value: Bear
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 75cc8d45f97606243a94d0388027da20, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 75cc8d45f97606243a94d0388027da20, type: 3}
+      propertyPath: m_TagString
+      value: Bear
       objectReference: {fileID: 0}
     - target: {fileID: 1553338291157438603, guid: 75cc8d45f97606243a94d0388027da20, type: 3}
       propertyPath: m_IsActive
