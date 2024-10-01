@@ -13,28 +13,21 @@ public class SFXManager : MonoBehaviour
 
     void Start()
     {
-       
         sndMan = this;
         audioSrc = GetComponent<AudioSource>();
         CallNoise();
-
-
-
-
-
-
     }
 
     void CallNoise()
     {
-        Invoke("RandomNoise", Random.Range(3, 10));
+        Invoke("RandomNoise", Random.Range(7.5f, 12.5f));
     }
 
     // Update is called once per frame
     void  RandomNoise()
     {
         randomIdleSound = Random.Range(0, 5);
-        Debug.Log("Moaning Sound");
+        // Debug.Log("Moaning Sound");
         audioSrc.PlayOneShot(IdleSound[randomIdleSound]);
         CallNoise();
 
