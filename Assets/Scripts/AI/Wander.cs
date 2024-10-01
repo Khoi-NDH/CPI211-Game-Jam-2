@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Wander : MonoBehaviour
 {
     public List<GameObject> rooms = new();
-    private Animator animator;
+    private BearAI bearAI;
     private NavMeshAgent agent;
 
     public float minWaitTime = 10f;
@@ -31,24 +31,10 @@ public class Wander : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
-        SelectNewDestination();
+        bearAI = GetComponent<BearAI>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (agent.remainingDistance != 0)
-        {
-            animator.Play("Walk");
-        }
-        else
-        {
-            animator.Play("None");
-        }
-    }
-
-    void SelectNewDestination()
+    public void NewWanderDestination()
     {
         var room = rooms[Random.Range(0, rooms.Count)];
 
@@ -62,6 +48,6 @@ public class Wander : MonoBehaviour
         Vector3 randZOffset = new Vector3(0, 0, Random.Range(-3f, 3f));
 
         agent.destination = (roomCenter + randXOffset + randZOffset);
-        Invoke("SelectNewDestination", Random.Range(minWaitTime, maxWaitTime));
+        bearAI.Invoke("SelectNewDestination", Random.Range(minWaitTime, maxWaitTime));
     }
 }

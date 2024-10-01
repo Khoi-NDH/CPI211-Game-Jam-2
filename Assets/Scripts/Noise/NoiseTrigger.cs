@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class NoiseTrigger : MonoBehaviour
 {
@@ -120,6 +121,6 @@ public class NoiseTrigger : MonoBehaviour
 
     private void NotifyMonster(Vector3 position)
     {
-        bear.GetComponent<BearAI>().NoiseHeard(position);
+        bear.GetComponent<BearAI>().NoiseHeard(transform, position);
     }
 }
