@@ -12,6 +12,13 @@ public class NoiseTrigger : MonoBehaviour
     public int distanceDecay = 1;
     public bool monsterPresent = false;
 
+    private GameObject bear;
+
+    void Start()
+    {
+        bear = GameObject.Find("Bear");
+    }
+
     private void OnTriggerEnter(Collider collider)
     {
         // If something makes a loud noise
@@ -113,9 +120,6 @@ public class NoiseTrigger : MonoBehaviour
 
     private void NotifyMonster(Vector3 position)
     {
-        /*
-         * TODO:
-         * Notify monster to investigate once it is implemented
-         */
+        bear.GetComponent<BearAI>().NoiseHeard(position);
     }
 }

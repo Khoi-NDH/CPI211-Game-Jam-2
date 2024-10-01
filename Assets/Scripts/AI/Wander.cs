@@ -9,6 +9,9 @@ public class Wander : MonoBehaviour
     private Animator animator;
     private NavMeshAgent agent;
 
+    public float minWaitTime = 10f;
+    public float maxWaitTime = 20f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +40,6 @@ public class Wander : MonoBehaviour
         var randZ = room.transform.position.x + Random.Range(-3f, 3f);
 
         agent.destination = new Vector3(randX, room.transform.position.y, randZ);
-        Invoke("SelectNewDestination", Random.Range(7.5f, 15f));
+        Invoke("SelectNewDestination", Random.Range(minWaitTime, maxWaitTime));
     }
 }
