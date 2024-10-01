@@ -9675,7 +9675,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858366616}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5588ab613763db42ad739f68c4034d2, type: 3}
   m_Name: 
@@ -9689,8 +9689,10 @@ MonoBehaviour:
   - {fileID: 1007875484}
   - {fileID: 1916657421}
   - {fileID: 854292818}
-  minWaitTime: 10
-  maxWaitTime: 20
+  minWaitTime: 15
+  maxWaitTime: 25
+  debugOverrideRoomChoice: 0
+  debugRoom: 0
 --- !u!4 &858366625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 75cc8d45f97606243a94d0388027da20, type: 3}
