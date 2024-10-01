@@ -7,8 +7,6 @@ public class Wander : MonoBehaviour
 {
     public List<GameObject> rooms = new();
     private Animator animator;
-    private Animation animation;
-    private Rigidbody rb;
     private NavMeshAgent agent;
 
     // Start is called before the first frame update
@@ -16,16 +14,19 @@ public class Wander : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
         SelectNewDestination();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity != Vector3.zero)
+        if (agent.remainingDistance != 0)
         {
-            animator.Play
+            animator.Play("Walk");
+        }
+        else
+        {
+            animator.Play("None");
         }
     }
 

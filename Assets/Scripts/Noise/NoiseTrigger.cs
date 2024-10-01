@@ -58,12 +58,12 @@ public class NoiseTrigger : MonoBehaviour
         }
 
         // Call noise propagation method
-        PropagateNoise();
+        PropagateNoise(collider.transform.position);
     }
 
     // Propagate noise breadth-first, visiting each adjacent room
     // If monster is in one of the visited rooms, it will hear the noise and investigate
-    private void PropagateNoise()
+    private void PropagateNoise(Vector3 position)
     {
         Queue<GameObject> queue = new();
         List<string> visited = new();
@@ -80,7 +80,7 @@ public class NoiseTrigger : MonoBehaviour
             if (currTrigger.monsterPresent)
             {
                 Debug.Log("Monster in " + currRoom.name + " heard a noise!");
-                NotifyMonster();
+                NotifyMonster(position);
                 return;
             }
 
@@ -111,7 +111,7 @@ public class NoiseTrigger : MonoBehaviour
         }
     }
 
-    private void NotifyMonster()
+    private void NotifyMonster(Vector3 position)
     {
         /*
          * TODO:
