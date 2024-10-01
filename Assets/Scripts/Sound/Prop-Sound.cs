@@ -16,9 +16,9 @@ public class PropSound : MonoBehaviour
         Invoke("EnableSound", 0.5f);
     }
 
-    private void OnCollisionEnter(Collision Collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (!waitingToStart)
+        if (!collision.transform.CompareTag("Player") && !waitingToStart)
         {
             GameObject instance = Instantiate(GenericSoundPrefab, GenericObject.transform.position, Quaternion.identity);
             Destroy(instance, 0.5f);

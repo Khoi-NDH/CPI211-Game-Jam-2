@@ -14,6 +14,7 @@ public class Restart : MonoBehaviour
     private AudioSource thisAudioSource;
     public AudioClip Scare;
     public float ScareVolume = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,27 +23,24 @@ public class Restart : MonoBehaviour
         //Victory = GameObject.FindGameObjectWithTag("Victory");
         Monster = GameObject.FindGameObjectWithTag("Bear");
         JumpscareImage.SetActive(false);
-
     }
+
     private void OnTriggerEnter(Collider trigger)
     {
         if (trigger.gameObject.CompareTag("Player"))
         {
-
             JumpscareImage.SetActive(true);
             //disappear in two seconds
             thisAudioSource.PlayOneShot(Scare);
             thisAudioSource.volume = ScareVolume;
-            Invoke("resetGame", 3f);
-           
-
+            Invoke("ResetGame", 3f);
         }
 
     //resetGame();
 
 }
 
-    void resetGame()
+    void ResetGame()
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
