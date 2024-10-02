@@ -9,9 +9,10 @@ public class PropSound : MonoBehaviour
     private GameObject GenericObject;
     public bool collided = false;
     private bool waitingToStart = true;
-    
+    private bool singleuse = true;
     void Start()
     {
+        singleuse = GetComponent<Thrown>().singleUse;
         GenericObject = gameObject;
         Invoke("EnableSound", 0.5f);
     }
@@ -20,8 +21,11 @@ public class PropSound : MonoBehaviour
     {
         if (!collision.transform.CompareTag("Player") && !waitingToStart)
         {
-            GameObject instance = Instantiate(GenericSoundPrefab, GenericObject.transform.position, Quaternion.identity);
-            Destroy(instance, 0.5f);
+            if (singleuse == false)
+            {
+                GameObject instance = Instantiate(GenericSoundPrefab, GenericObject.transform.position, Quaternion.identity);
+                Destroy(instance, 0.5f);
+            }
         }
     }
 
