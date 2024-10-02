@@ -6408,7 +6408,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Congratulation! You have escaped the monster!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c35e031998179ef4d95a38aab2e98f83, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6472,7 +6472,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: -349.30765, z: -427.06128, w: 262.2036}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &652267458
@@ -6982,6 +6982,7 @@ MonoBehaviour:
   radius: 0.25
   distance: 1
   height: 0
+  keyGet: {fileID: 0}
 --- !u!114 &712619262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7026,6 +7027,8 @@ MonoBehaviour:
   Player: {fileID: 712619260}
   Teleport: {fileID: 761281839}
   Victory: {fileID: 652267454}
+  Locked: {fileID: 0}
+  hasKey: 0
 --- !u!4 &712619270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
@@ -17031,8 +17034,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: It can hear you! Throw an object to distract it. Find an exit!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c35e031998179ef4d95a38aab2e98f83, type: 2}
+  m_sharedMaterial: {fileID: -159730782123177516, guid: c35e031998179ef4d95a38aab2e98f83, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
