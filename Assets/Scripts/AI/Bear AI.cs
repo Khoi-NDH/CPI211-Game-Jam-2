@@ -12,13 +12,14 @@ public class BearAI : MonoBehaviour
     private Animator animator;
     private NavMeshAgent agent;
     private AudioSource audioSource;
-
+    private float lastUsedTime;
     private AIState state = AIState.Wander;
     [Header("Movement Speed")]
     public float wanderSpeed = 3f;
     public float searchSpeed = 6f;
     [Header("Search")]
     public float searchTime = 30f;
+    public float AlertCooldown = 5f;
     private float searchTimer;
     public AudioClip alertSound;
 
@@ -105,10 +106,15 @@ public class BearAI : MonoBehaviour
 
     public void NoiseHeard(Transform transform, Vector3 position)
     {
-        audioSource.PlayOneShot(alertSound);
+       
         state = AIState.Search;
         agent.speed = searchSpeed;
         search.BeginSearch(transform, position);
         searchTimer = 0f;
+        if (Time.time > lastUsedTime + AlertCooldown)
+        {
+            audioSource.PlayOneShot(alertSound);
+            lastUsedTime = Time.time;
+        }
     }
 }
