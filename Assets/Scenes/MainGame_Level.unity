@@ -9960,6 +9960,7 @@ MonoBehaviour:
   wanderSpeed: 3
   searchSpeed: 5
   searchTime: 30
+  alertSound: {fileID: 8300000, guid: 4c0d4ac92c3c7464d8754fb9e2aac4bd, type: 3}
 --- !u!1 &860109202 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9eae25c482ccaaf49a7ab4a37bd1d68d, type: 3}

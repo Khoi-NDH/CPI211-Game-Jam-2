@@ -11,6 +11,7 @@ public class BearAI : MonoBehaviour
     private Search search;
     private Animator animator;
     private NavMeshAgent agent;
+    private AudioSource audioSource;
 
     private AIState state = AIState.Wander;
     [Header("Movement Speed")]
@@ -19,6 +20,7 @@ public class BearAI : MonoBehaviour
     [Header("Search")]
     public float searchTime = 30f;
     private float searchTimer;
+    public AudioClip alertSound;
 
     private bool arrivedAtDest = true;
 
@@ -35,6 +37,7 @@ public class BearAI : MonoBehaviour
         search = GetComponent<Search>();
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponentInChildren<AudioSource>();
 
         SelectNewDestination();
     }
@@ -102,6 +105,7 @@ public class BearAI : MonoBehaviour
 
     public void NoiseHeard(Transform transform, Vector3 position)
     {
+        audioSource.PlayOneShot(alertSound);
         state = AIState.Search;
         agent.speed = searchSpeed;
         search.BeginSearch(transform, position);
