@@ -6548,7 +6548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shatteredVersion: {fileID: 1835346102462890900, guid: 9480bbcf34f75754dbf1c1ecc4f414fa, type: 3}
   strength: 3
-  singleUse: 0
+  singleUse: 1
 --- !u!54 &548119301
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9343,7 +9343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shatteredVersion: {fileID: 1835346102462890900, guid: 9480bbcf34f75754dbf1c1ecc4f414fa, type: 3}
   strength: 3
-  singleUse: 0
+  singleUse: 1
 --- !u!54 &744592649
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10247,7 +10247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shatteredVersion: {fileID: 7605167700857894503, guid: 98a27c4aa0153704e8811021b532e95d, type: 3}
   strength: 3
-  singleUse: 0
+  singleUse: 1
 --- !u!54 &806396057
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13703,7 +13703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shatteredVersion: {fileID: 1835346102462890900, guid: 9480bbcf34f75754dbf1c1ecc4f414fa, type: 3}
   strength: 3
-  singleUse: 0
+  singleUse: 1
 --- !u!54 &970262949
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16798,7 +16798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shatteredVersion: {fileID: 1835346102462890900, guid: 9480bbcf34f75754dbf1c1ecc4f414fa, type: 3}
   strength: 3
-  singleUse: 0
+  singleUse: 1
 --- !u!54 &1247991512
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24326,7 +24326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shatteredVersion: {fileID: 1835346102462890900, guid: 9480bbcf34f75754dbf1c1ecc4f414fa, type: 3}
   strength: 3
-  singleUse: 0
+  singleUse: 1
 --- !u!54 &1808320839
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24513,7 +24513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shatteredVersion: {fileID: 1835346102462890900, guid: 9480bbcf34f75754dbf1c1ecc4f414fa, type: 3}
   strength: 3
-  singleUse: 0
+  singleUse: 1
 --- !u!54 &1823286377
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29200,7 +29200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shatteredVersion: {fileID: 7605167700857894503, guid: 98a27c4aa0153704e8811021b532e95d, type: 3}
   strength: 3
-  singleUse: 0
+  singleUse: 1
 --- !u!54 &2093581108
 Rigidbody:
   m_ObjectHideFlags: 0
