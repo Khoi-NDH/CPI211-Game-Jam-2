@@ -7933,6 +7933,7 @@ MonoBehaviour:
   radius: 0.25
   distance: 1
   height: 0
+  keyGet: {fileID: 0}
 --- !u!114 &712619262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7977,6 +7978,8 @@ MonoBehaviour:
   Player: {fileID: 712619260}
   Teleport: {fileID: 761281839}
   Victory: {fileID: 652267454}
+  Locked: {fileID: 0}
+  hasKey: 0
 --- !u!1001 &714077808
 PrefabInstance:
   m_ObjectHideFlags: 0
