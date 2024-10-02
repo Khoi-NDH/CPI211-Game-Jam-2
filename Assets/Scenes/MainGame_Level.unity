@@ -4002,7 +4002,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -320.9726, y: -161.10004}
+  m_AnchoredPosition: {x: -314, y: -161.10004}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &337810041
@@ -4048,8 +4048,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: It's locked. Find the key!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c35e031998179ef4d95a38aab2e98f83, type: 2}
+  m_sharedMaterial: {fileID: -159730782123177516, guid: c35e031998179ef4d95a38aab2e98f83, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4109,10 +4109,10 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -349.30765, z: -427.06128, w: 262.2036}
+  m_margin: {x: 0, y: -349.30765, z: -553.86115, w: 262.2036}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &337810043
@@ -8062,7 +8062,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Congratulation! You have escaped the monster!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c35e031998179ef4d95a38aab2e98f83, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -8126,7 +8126,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: -349.30765, z: -997.7446, w: 146.44269}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &652267458
@@ -10909,6 +10909,7 @@ MonoBehaviour:
   wanderSpeed: 3
   searchSpeed: 5
   searchTime: 30
+  AlertCooldown: 5
   alertSound: {fileID: 8300000, guid: 4c0d4ac92c3c7464d8754fb9e2aac4bd, type: 3}
 --- !u!1 &860109202 stripped
 GameObject:
@@ -20234,8 +20235,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: It can hear you! Throw an object to distract it. Find an exit!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c35e031998179ef4d95a38aab2e98f83, type: 2}
+  m_sharedMaterial: {fileID: -159730782123177516, guid: c35e031998179ef4d95a38aab2e98f83, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
