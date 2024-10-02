@@ -44,6 +44,8 @@ public class Teleporter : MonoBehaviour
     void ResetGame()
     {
         Scene scene = SceneManager.GetActiveScene();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
