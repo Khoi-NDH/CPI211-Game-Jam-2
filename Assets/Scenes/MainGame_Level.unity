@@ -6546,8 +6546,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59f643b730982b4fa899eb3c19731df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shatteredVersion: {fileID: 0}
-  strength: 1
+  shatteredVersion: {fileID: 1835346102462890900, guid: 9480bbcf34f75754dbf1c1ecc4f414fa, type: 3}
+  strength: 3
   singleUse: 0
 --- !u!54 &548119301
 Rigidbody:
@@ -9341,8 +9341,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59f643b730982b4fa899eb3c19731df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shatteredVersion: {fileID: 0}
-  strength: 1
+  shatteredVersion: {fileID: 1835346102462890900, guid: 9480bbcf34f75754dbf1c1ecc4f414fa, type: 3}
+  strength: 3
   singleUse: 0
 --- !u!54 &744592649
 Rigidbody:
@@ -10245,8 +10245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59f643b730982b4fa899eb3c19731df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shatteredVersion: {fileID: 0}
-  strength: 1
+  shatteredVersion: {fileID: 7605167700857894503, guid: 98a27c4aa0153704e8811021b532e95d, type: 3}
+  strength: 3
   singleUse: 0
 --- !u!54 &806396057
 Rigidbody:
@@ -13701,8 +13701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59f643b730982b4fa899eb3c19731df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shatteredVersion: {fileID: 0}
-  strength: 1
+  shatteredVersion: {fileID: 1835346102462890900, guid: 9480bbcf34f75754dbf1c1ecc4f414fa, type: 3}
+  strength: 3
   singleUse: 0
 --- !u!54 &970262949
 Rigidbody:
@@ -16796,8 +16796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59f643b730982b4fa899eb3c19731df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shatteredVersion: {fileID: 0}
-  strength: 1
+  shatteredVersion: {fileID: 1835346102462890900, guid: 9480bbcf34f75754dbf1c1ecc4f414fa, type: 3}
+  strength: 3
   singleUse: 0
 --- !u!54 &1247991512
 Rigidbody:
@@ -24324,8 +24324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59f643b730982b4fa899eb3c19731df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shatteredVersion: {fileID: 0}
-  strength: 1
+  shatteredVersion: {fileID: 1835346102462890900, guid: 9480bbcf34f75754dbf1c1ecc4f414fa, type: 3}
+  strength: 3
   singleUse: 0
 --- !u!54 &1808320839
 Rigidbody:
@@ -24511,8 +24511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59f643b730982b4fa899eb3c19731df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shatteredVersion: {fileID: 0}
-  strength: 1
+  shatteredVersion: {fileID: 1835346102462890900, guid: 9480bbcf34f75754dbf1c1ecc4f414fa, type: 3}
+  strength: 3
   singleUse: 0
 --- !u!54 &1823286377
 Rigidbody:
@@ -29198,8 +29198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59f643b730982b4fa899eb3c19731df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shatteredVersion: {fileID: 0}
-  strength: 1
+  shatteredVersion: {fileID: 7605167700857894503, guid: 98a27c4aa0153704e8811021b532e95d, type: 3}
+  strength: 3
   singleUse: 0
 --- !u!54 &2093581108
 Rigidbody:
